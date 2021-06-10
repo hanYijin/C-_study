@@ -1,0 +1,11 @@
+C:\Users\gksdl\source\repos\csvReadWrite\csvReadWrite\bin\Debug\csvReadWrite.exe.config
+C:\Users\gksdl\source\repos\csvReadWrite\csvReadWrite\bin\Debug\csvReadWrite.exe
+C:\Users\gksdl\source\repos\csvReadWrite\csvReadWrite\bin\Debug\csvReadWrite.pdb
+C:\Users\gksdl\source\repos\csvReadWrite\csvReadWrite\obj\Debug\csvReadWrite.csprojAssemblyReference.cache
+C:\Users\gksdl\source\repos\csvReadWrite\csvReadWrite\obj\Debug\csvReadWrite.Form1.resources
+C:\Users\gksdl\source\repos\csvReadWrite\csvReadWrite\obj\Debug\csvReadWrite.Properties.Resources.resources
+C:\Users\gksdl\source\repos\csvReadWrite\csvReadWrite\obj\Debug\csvReadWrite.csproj.GenerateResource.cache
+C:\Users\gksdl\source\repos\csvReadWrite\csvReadWrite\obj\Debug\csvReadWrite.csproj.CoreCompileInputs.cache
+C:\Users\gksdl\source\repos\csvReadWrite\csvReadWrite\obj\Debug\csvReadWrite.exe
+C:\Users\gksdl\source\repos\csvReadWrite\csvReadWrite\obj\Debug\csvReadWrite.pdb
+C:\Users\gksdl\source\repos\csvReadWrite\csvReadWrite\obj\Debug\csvReadWrite.Form2.resources

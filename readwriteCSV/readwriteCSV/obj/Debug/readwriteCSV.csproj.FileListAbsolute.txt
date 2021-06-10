@@ -1,0 +1,10 @@
+D:\c#_study\readwriteCSV\readwriteCSV\bin\Debug\readwriteCSV.exe.config
+D:\c#_study\readwriteCSV\readwriteCSV\bin\Debug\readwriteCSV.exe
+D:\c#_study\readwriteCSV\readwriteCSV\bin\Debug\readwriteCSV.pdb
+D:\c#_study\readwriteCSV\readwriteCSV\obj\Debug\readwriteCSV.csprojAssemblyReference.cache
+D:\c#_study\readwriteCSV\readwriteCSV\obj\Debug\readwriteCSV.Form1.resources
+D:\c#_study\readwriteCSV\readwriteCSV\obj\Debug\readwriteCSV.Properties.Resources.resources
+D:\c#_study\readwriteCSV\readwriteCSV\obj\Debug\readwriteCSV.csproj.GenerateResource.cache
+D:\c#_study\readwriteCSV\readwriteCSV\obj\Debug\readwriteCSV.csproj.CoreCompileInputs.cache
+D:\c#_study\readwriteCSV\readwriteCSV\obj\Debug\readwriteCSV.exe
+D:\c#_study\readwriteCSV\readwriteCSV\obj\Debug\readwriteCSV.pdb
