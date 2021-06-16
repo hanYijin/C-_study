@@ -1,0 +1,10 @@
+D:\C-_study\xmlReadWrite\xmlReadWrite\obj\Debug\xmlReadWrite.csprojAssemblyReference.cache
+D:\C-_study\xmlReadWrite\xmlReadWrite\obj\Debug\xmlReadWrite.Form1.resources
+D:\C-_study\xmlReadWrite\xmlReadWrite\obj\Debug\xmlReadWrite.Properties.Resources.resources
+D:\C-_study\xmlReadWrite\xmlReadWrite\obj\Debug\xmlReadWrite.csproj.GenerateResource.cache
+D:\C-_study\xmlReadWrite\xmlReadWrite\obj\Debug\xmlReadWrite.csproj.CoreCompileInputs.cache
+D:\C-_study\xmlReadWrite\xmlReadWrite\bin\Debug\xmlReadWrite.exe.config
+D:\C-_study\xmlReadWrite\xmlReadWrite\bin\Debug\xmlReadWrite.exe
+D:\C-_study\xmlReadWrite\xmlReadWrite\bin\Debug\xmlReadWrite.pdb
+D:\C-_study\xmlReadWrite\xmlReadWrite\obj\Debug\xmlReadWrite.exe
+D:\C-_study\xmlReadWrite\xmlReadWrite\obj\Debug\xmlReadWrite.pdb

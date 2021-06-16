@@ -1,0 +1,64 @@
+Json {"속성":"값}
+java 객체(class)형태의 자료구조
+프로젝트> NuGet> Newtonsoft.Json 설치
+json 객체 형태를 읽고 쓰기가 가능
+
+var jstudentArray = new JArray();
+JArray
+using Newtonsoft.Json.Linq;
+
+var jstudentArray = new JArray(); //Newtonsoft.Json 정의한 객체
+            //var 데이터 형을 정하지 않는 변수 선언(let 동일)
+            //c#은 선언 시점에서 초기화한 데이터형으로 고정
+            var jstudentObject = new JObject();
+
+
+▲하나의 객체 쓰기
+------------------------------------------------------------------
+여러 객체 쓰기
+public List<Student> students = new List<Student>();
+
+var jstudentArray = new JArray();
+var jstudentObject = new JObject();
+
+if(students>0)
+{
+	foreach(var item in students)
+	{
+		jstudentObject.Add("name",item.name);
+		jstudentObject.Add("age",item.age);
+		jstudentObject.Add("hakbeon",item.hakbeon);
+		jstudentArray.Add(jstudentObject);
+	}
+}
+jstudentObject = new JObject();
+jstudentObject.Add("name",textBox_name.Text);
+jstudentObject.Add("age",textBox_age.Text);
+jstudentObject.Add("hakbeon",textBox_hakbeon.Text);
+jstudentArray.Add(jstudentObject);
+
+
+### json 읽기 ### 
+private void but_write_Click(object sender, EventArgs e)
+        {
+            var jstudentArray = new JArray(); //Newtonsoft.Json 정의한 객체 
+            //student []
+            //var 데이터 형을 정하지 않는 변수 선언(let 동일)
+            //c#은 선언 시점에서 초기화한 데이터형으로 고정
+            var jstudentObject = new JObject();
+            //new student()
+            jstudentObject.Add("name", textBox_name.Text);
+            jstudentObject.Add("age", textBox_age.Text);
+            jstudentObject.Add("hakbeon", textBox_hakbeon.Text);
+
+            jstudentArray.Add(jstudentObject); //json 배열에 student 객체 추가
+            
+            var jstudentArray_object = new JObject();
+            jstudentArray_object.Add("student", jstudentArray);
+            // "student"[{ Student}]
+            var jstudents_object = new JObject();
+            jstudents_object.Add("students", jstudentArray_object);
+            
+            File.WriteAllText(@"./Students.json", jstudents_object.ToString());
+        }
+

@@ -1,0 +1,16 @@
+{
+  "students": {
+    "student": [
+      {
+        "name": "한이진",
+        "age": 25,
+        "hakbeon": "1537293"
+      },
+      {
+        "name": "dfdsf",
+        "age": "23",
+        "hakbeon": "342342"
+      }
+    ]
+  }
+}
