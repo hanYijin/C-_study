@@ -1,0 +1,58 @@
+<item>
+<col name="시군">포항시</col>
+<col name="시설명">상락원</col>
+<col name="시설종류">양로시설</col>
+<col name="연락처">054-614-2233</col>
+<col name="연번">1</col>
+<col name="정원">70</col>
+<col name="현원">37</col>
+<col name="소재지">포항시 남구 장기면 산서길 54</col>
+</item>
+...
+-----------------------------------------------------------------------
+foreach (var item in api.Descendants("item"))
+            {
+                int indexer = 0;
+                string num = "";
+                string city = "";
+                string type = "";
+                string name = "";
+                string address = "";
+                string tel = "";
+                string allpeople = "";
+                string people = "";
+                foreach (var item2 in item.Elements("col").Attributes().ToList())
+                {
+                    switch (item2.Value)
+                    {
+                        case "연번":
+                            num = item.Elements("col").ToList()[indexer].Value;
+                            break;
+                        case "시군":
+                            city= item.Elements("col").ToList()[indexer].Value;
+                            break;
+                        case "시설종류":
+                            type = item.Elements("col").ToList()[indexer].Value;
+                            break;
+                        case "시설명":
+                            name= item.Elements("col").ToList()[indexer].Value;
+                            break;
+                        case "소재지":
+                            address= item.Elements("col").ToList()[indexer].Value;
+                            break;
+                        case "연락처":
+                            tel = item.Elements("col").ToList()[indexer].Value;
+                            break;
+                        case "정원":
+                            allpeople= item.Elements("col").ToList()[indexer].Value;
+                            break;
+                        case "현원":
+                            people= item.Elements("col").ToList()[indexer].Value;
+                            break;
+                        default:
+                            break;
+                    }
+                    indexer++;
+                }
+                facilities.Add(new Facility(num, city, type, name, address, tel, allpeople, people));
+            }

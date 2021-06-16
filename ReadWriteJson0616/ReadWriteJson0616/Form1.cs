@@ -115,43 +115,53 @@ namespace ReadWriteJson0616
             //    string people = data.GetNamespaceOfPrefix("현원").NamespaceName; ;
             //    facilities.Add(new Facility(num, city, type, name, address, tel, allpeople, people));
             //}
+
+
             foreach (var item in api.Descendants("item"))
             {
+                int indexer = 0;
+                string num = "";
+                string city = "";
+                string type = "";
+                string name = "";
+                string address = "";
+                string tel = "";
+                string allpeople = "";
+                string people = "";
                 foreach (var item2 in item.Elements("col").Attributes().ToList())
                 {
-                    string num;
-                    string city; 
-                    string type;
-                    string name;
-                   string address;
-                   string tel;
-                   string allpeople;
-                   string people;
-
-
                     switch (item2.Value)
                     {
                         case "연번":
-
+                            num = item.Elements("col").ToList()[indexer].Value;
                             break;
                         case "시군":
+                            city= item.Elements("col").ToList()[indexer].Value;
                             break;
                         case "시설종류":
+                            type = item.Elements("col").ToList()[indexer].Value;
                             break;
                         case "시설명":
+                            name= item.Elements("col").ToList()[indexer].Value;
                             break;
                         case "소재지":
+                            address= item.Elements("col").ToList()[indexer].Value;
                             break;
                         case "연락처":
+                            tel = item.Elements("col").ToList()[indexer].Value;
                             break;
                         case "정원":
+                            allpeople= item.Elements("col").ToList()[indexer].Value;
                             break;
                         case "현원":
+                            people= item.Elements("col").ToList()[indexer].Value;
                             break;
                         default:
                             break;
                     }
-                } 
+                    indexer++;
+                }
+                facilities.Add(new Facility(num, city, type, name, address, tel, allpeople, people));
             }
             facilityView.DataSource = facilities;
         }
