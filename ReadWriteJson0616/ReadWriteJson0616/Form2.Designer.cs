@@ -33,17 +33,17 @@ namespace ReadWriteJson0616
             this.bnt_MemberWrite = new System.Windows.Forms.Button();
             this.btn_MemberRead = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pwDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tb_id = new System.Windows.Forms.TextBox();
             this.tb_name = new System.Windows.Forms.TextBox();
             this.tb_pw = new System.Windows.Forms.TextBox();
             this.tb_tel = new System.Windows.Forms.TextBox();
             this.tb_address = new System.Windows.Forms.TextBox();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pwDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +56,7 @@ namespace ReadWriteJson0616
             this.bnt_MemberWrite.TabIndex = 1;
             this.bnt_MemberWrite.Text = "데이터 추가";
             this.bnt_MemberWrite.UseVisualStyleBackColor = true;
+            this.bnt_MemberWrite.Click += new System.EventHandler(this.bnt_MemberWrite_Click);
             // 
             // btn_MemberRead
             // 
@@ -82,40 +83,6 @@ namespace ReadWriteJson0616
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(649, 251);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // memberBindingSource
-            // 
-            this.memberBindingSource.DataSource = typeof(ReadWriteJson0616.Member);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // pwDataGridViewTextBoxColumn
-            // 
-            this.pwDataGridViewTextBoxColumn.DataPropertyName = "pw";
-            this.pwDataGridViewTextBoxColumn.HeaderText = "pw";
-            this.pwDataGridViewTextBoxColumn.Name = "pwDataGridViewTextBoxColumn";
-            // 
-            // telDataGridViewTextBoxColumn
-            // 
-            this.telDataGridViewTextBoxColumn.DataPropertyName = "tel";
-            this.telDataGridViewTextBoxColumn.HeaderText = "tel";
-            this.telDataGridViewTextBoxColumn.Name = "telDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
             // 
             // tb_id
             // 
@@ -151,6 +118,40 @@ namespace ReadWriteJson0616
             this.tb_address.Name = "tb_address";
             this.tb_address.Size = new System.Drawing.Size(131, 21);
             this.tb_address.TabIndex = 8;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // pwDataGridViewTextBoxColumn
+            // 
+            this.pwDataGridViewTextBoxColumn.DataPropertyName = "pw";
+            this.pwDataGridViewTextBoxColumn.HeaderText = "pw";
+            this.pwDataGridViewTextBoxColumn.Name = "pwDataGridViewTextBoxColumn";
+            // 
+            // telDataGridViewTextBoxColumn
+            // 
+            this.telDataGridViewTextBoxColumn.DataPropertyName = "tel";
+            this.telDataGridViewTextBoxColumn.HeaderText = "tel";
+            this.telDataGridViewTextBoxColumn.Name = "telDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // memberBindingSource
+            // 
+            this.memberBindingSource.DataSource = typeof(ReadWriteJson0616.Member);
             // 
             // Form2
             // 
