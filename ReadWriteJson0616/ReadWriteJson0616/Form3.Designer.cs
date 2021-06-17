@@ -30,9 +30,13 @@ namespace ReadWriteJson0616
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.btn_dataview = new System.Windows.Forms.Button();
             this.hospitalView = new System.Windows.Forms.DataGridView();
-            this.hospitalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Roomchart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.numDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.openDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalRoomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,7 +44,9 @@ namespace ReadWriteJson0616
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hospitalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.hospitalView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Roomchart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,12 +76,27 @@ namespace ReadWriteJson0616
             this.hospitalView.Location = new System.Drawing.Point(32, 76);
             this.hospitalView.Name = "hospitalView";
             this.hospitalView.RowTemplate.Height = 23;
-            this.hospitalView.Size = new System.Drawing.Size(730, 299);
+            this.hospitalView.Size = new System.Drawing.Size(730, 166);
             this.hospitalView.TabIndex = 11;
             // 
-            // hospitalBindingSource
+            // Roomchart
             // 
-            this.hospitalBindingSource.DataSource = typeof(ReadWriteJson0616.Hospital);
+            chartArea1.Name = "ChartArea1";
+            this.Roomchart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.Roomchart.Legends.Add(legend1);
+            this.Roomchart.Location = new System.Drawing.Point(37, 261);
+            this.Roomchart.Name = "Roomchart";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.Roomchart.Series.Add(series1);
+            this.Roomchart.Size = new System.Drawing.Size(724, 225);
+            this.Roomchart.TabIndex = 12;
+            this.Roomchart.Text = "chart1";
+            title1.Name = "병상 수";
+            title1.Text = "병원 별 병상 수";
+            this.Roomchart.Titles.Add(title1);
             // 
             // numDataGridViewTextBoxColumn
             // 
@@ -119,16 +140,22 @@ namespace ReadWriteJson0616
             this.telDataGridViewTextBoxColumn.HeaderText = "전화번호";
             this.telDataGridViewTextBoxColumn.Name = "telDataGridViewTextBoxColumn";
             // 
+            // hospitalBindingSource
+            // 
+            this.hospitalBindingSource.DataSource = typeof(ReadWriteJson0616.Hospital);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 519);
+            this.Controls.Add(this.Roomchart);
             this.Controls.Add(this.hospitalView);
             this.Controls.Add(this.btn_dataview);
             this.Name = "Form3";
             this.Text = "Form3";
             ((System.ComponentModel.ISupportInitialize)(this.hospitalView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Roomchart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hospitalBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -146,5 +173,6 @@ namespace ReadWriteJson0616
         private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource hospitalBindingSource;
+        private System.Windows.Forms.DataVisualization.Charting.Chart Roomchart;
     }
 }

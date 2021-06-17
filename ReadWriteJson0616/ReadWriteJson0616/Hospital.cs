@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ReadWriteJson0616
 {
-    class Hospital
+    public class Hospital
     {
         public Hospital(int num, string openDate, string totalRoom, string address, string name, string type, string tel)
         {
