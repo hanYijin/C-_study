@@ -20,6 +20,23 @@ namespace Json0617
         public Form1()
         {
             InitializeComponent();
+            /*chart1.Series[0].Name = "성적";
+            //차트에 데이터 넣기
+            for( int i=0; i<=10; i++)
+            {
+                //chart1.Series[0].Points.AddXY(i, i * 10);
+                chart1.Series["성적"].Points.AddXY(i, i * 10);
+                //Addxy(x축,y출)
+            }
+            //항목 추가
+            chart1.Series.Add("나이");
+
+            for (int i = 0; i <= 10; i++)
+            {
+                chart1.Series[1].Points.AddXY(i, i * 10);
+                //Addxy(x축,y출)
+            }*/
+
         }
 
         private void but_write_Click(object sender, EventArgs e)
@@ -145,7 +162,7 @@ namespace Json0617
 
         private void button_json_api_Click(object sender, EventArgs e)
         {
-            int count = 860; //로또 회차
+            int count = 950; //로또 회차
             string url = "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo="+count;
 
             using (WebClient wc = new WebClient())
@@ -162,6 +179,17 @@ namespace Json0617
                 Console.WriteLine(jArray["totSellamnt"]);
 
                 DisplayLotto();
+
+            /*    chart1.Series[0].Name = jArray["drwNo"].ToString()+" 회차 당첨번호";
+                chart1.Series[0].Points.AddXY("번호1", int.Parse(jArray["drwtNo1"].ToString()));
+                chart1.Series[0].Points.AddXY("번호2", int.Parse(jArray["drwtNo2"].ToString()));
+                chart1.Series[0].Points.AddXY("번호3", int.Parse(jArray["drwtNo3"].ToString()));
+                chart1.Series[0].Points.AddXY("번호4", int.Parse(jArray["drwtNo4"].ToString()));
+                chart1.Series[0].Points.AddXY("번호5", int.Parse(jArray["drwtNo5"].ToString()));
+                chart1.Series[0].Points.AddXY("번호6", int.Parse(jArray["drwtNo6"].ToString()));
+                chart1.Series[0].Points.AddXY("보너스", int.Parse(jArray["bnusNo"].ToString()));
+                */
+
             }
 
 
@@ -171,7 +199,7 @@ namespace Json0617
         private void DisplayLotto()
         {
             List<Lotto> lottos = new List<Lotto>();
-            int count = 950;
+            int count = 960;
             while (true)
             {
                 using (WebClient wc = new WebClient())
@@ -193,11 +221,27 @@ namespace Json0617
                         jArray["bnusNo"].ToString(),
                         jArray["drwNo"].ToString(), jArray["drwNoDate"].ToString()
                         ));
-                    
+
                 }
                 dataGridView2.DataSource = null;
                 dataGridView2.DataSource = lottos;
+
             }
+            chart1.Series[0].Name = lottos[0].drwNo + " 회차 당첨번호";
+            for (int i=0; i < lottos.Count; i++)
+            {
+                if(i>0)
+                    chart1.Series.Add(lottos[i].drwNo + " 회차 당첨번호");
+
+                chart1.Series[i].Points.AddXY("번호1", int.Parse(lottos[i].drwtNo1));
+                chart1.Series[i].Points.AddXY("번호2", int.Parse(lottos[i].drwtNo2));
+                chart1.Series[i].Points.AddXY("번호3", int.Parse(lottos[i].drwtNo3));
+                chart1.Series[i].Points.AddXY("번호4", int.Parse(lottos[i].drwtNo4));
+                chart1.Series[i].Points.AddXY("번호5", int.Parse(lottos[i].drwtNo5));
+                chart1.Series[i].Points.AddXY("번호6", int.Parse(lottos[i].drwtNo6));
+                chart1.Series[i].Points.AddXY("보너스", int.Parse(lottos[i].bnusNo));
+            }                 
+            
         }
     }
 }

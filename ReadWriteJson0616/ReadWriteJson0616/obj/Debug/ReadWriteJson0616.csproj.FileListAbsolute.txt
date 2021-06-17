@@ -12,3 +12,4 @@ D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\bin\Debug\Newtonsoft.Json.dll
 D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\bin\Debug\Newtonsoft.Json.xml
 D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\obj\Debug\ReadWriteJson0616.csproj.CopyComplete
 D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\obj\Debug\ReadWriteJson0616.Form2.resources
+D:\C-_study\ReadWriteJson0616\ReadWriteJson0616\obj\Debug\ReadWriteJson0616.Form3.resources

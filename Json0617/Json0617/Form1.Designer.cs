@@ -30,6 +30,9 @@ namespace Json0617
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.but_read = new System.Windows.Forms.Button();
             this.but_write = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -40,11 +43,8 @@ namespace Json0617
             this.button_read = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button_json_api = new System.Windows.Forms.Button();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sabeonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.doctorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.lottoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.drwtNo1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.drwtNo2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.drwtNo3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,10 +54,15 @@ namespace Json0617
             this.bnusNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.drwNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.drwNoDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lottoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sabeonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doctorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lottoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // but_read
@@ -150,22 +155,6 @@ namespace Json0617
             this.button_json_api.UseVisualStyleBackColor = true;
             this.button_json_api.Click += new System.EventHandler(this.button_json_api_Click);
             // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "이름";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // sabeonDataGridViewTextBoxColumn
-            // 
-            this.sabeonDataGridViewTextBoxColumn.DataPropertyName = "sabeon";
-            this.sabeonDataGridViewTextBoxColumn.HeaderText = "사번";
-            this.sabeonDataGridViewTextBoxColumn.Name = "sabeonDataGridViewTextBoxColumn";
-            // 
-            // doctorBindingSource
-            // 
-            this.doctorBindingSource.DataSource = typeof(Json0617.Doctor);
-            // 
             // dataGridView2
             // 
             this.dataGridView2.AutoGenerateColumns = false;
@@ -181,15 +170,28 @@ namespace Json0617
             this.drwNoDataGridViewTextBoxColumn,
             this.drwNoDateDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.lottoBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(296, 104);
+            this.dataGridView2.Location = new System.Drawing.Point(296, 81);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(786, 290);
+            this.dataGridView2.Size = new System.Drawing.Size(327, 290);
             this.dataGridView2.TabIndex = 9;
             // 
-            // lottoBindingSource
+            // chart1
             // 
-            this.lottoBindingSource.DataSource = typeof(Json0617.Lotto);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(629, 30);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(533, 525);
+            this.chart1.TabIndex = 10;
+            this.chart1.Text = "chart1";
             // 
             // drwtNo1DataGridViewTextBoxColumn
             // 
@@ -245,11 +247,32 @@ namespace Json0617
             this.drwNoDateDataGridViewTextBoxColumn.HeaderText = "drwNoDate";
             this.drwNoDateDataGridViewTextBoxColumn.Name = "drwNoDateDataGridViewTextBoxColumn";
             // 
+            // lottoBindingSource
+            // 
+            this.lottoBindingSource.DataSource = typeof(Json0617.Lotto);
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "이름";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // sabeonDataGridViewTextBoxColumn
+            // 
+            this.sabeonDataGridViewTextBoxColumn.DataPropertyName = "sabeon";
+            this.sabeonDataGridViewTextBoxColumn.HeaderText = "사번";
+            this.sabeonDataGridViewTextBoxColumn.Name = "sabeonDataGridViewTextBoxColumn";
+            // 
+            // doctorBindingSource
+            // 
+            this.doctorBindingSource.DataSource = typeof(Json0617.Doctor);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1094, 497);
+            this.ClientSize = new System.Drawing.Size(1174, 593);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.button_json_api);
             this.Controls.Add(this.button_read);
@@ -263,9 +286,10 @@ namespace Json0617
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lottoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,6 +321,7 @@ namespace Json0617
         private System.Windows.Forms.DataGridViewTextBoxColumn drwNoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn drwNoDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource lottoBindingSource;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 
