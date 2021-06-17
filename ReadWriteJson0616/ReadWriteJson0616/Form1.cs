@@ -15,7 +15,7 @@ namespace ReadWriteJson0616
 {
     public partial class Form1 : Form
     {
-        const string FILENAME = "Students.json";
+        const string FILENAME = @"jsonData\Students.json";
         public List<Student> students = new List<Student>();
         public Form1()
         {
@@ -24,6 +24,7 @@ namespace ReadWriteJson0616
 
         private void btn_read_Click(object sender, EventArgs e)
         {
+
             students.Clear();//중복방지
             string source = File.ReadAllText(FILENAME);//파일이름 상수로 지정하여 휴먼에러 줄임
             JObject jsonObjectStudent = JObject.Parse(source);
@@ -38,7 +39,7 @@ namespace ReadWriteJson0616
                             age = int.Parse(item["age"].ToString().Replace("{", "").Replace("}", "")),
                             hakbeon = item["hakbeon"].ToString().Replace("{", "").Replace("}", "")
                         }).ToList<Student>();
-            
+            studentsView.DataSource = null;
             studentsView.DataSource = students;
 
 
@@ -46,6 +47,15 @@ namespace ReadWriteJson0616
 
         private void but_write_Click(object sender, EventArgs e)
         {
+            try
+            {
+                //btn_read.PerformClick();//강제 클릭
+                load(FILENAME, studentsView);
+            }catch(Exception ex)
+            {
+
+            }
+            
             var jstudentArray = new JArray(); //Newtonsoft.Json 정의한 객체 
             //student []
             //var 데이터 형을 정하지 않는 변수 선언(let 동일)
@@ -64,7 +74,8 @@ namespace ReadWriteJson0616
             if (students.Count>0)
             {
                 foreach(var item in students)
-                { 
+                {
+                    jstudentObject = new JObject();
                     jstudentObject.Add("name", item.name);
                     jstudentObject.Add("age", item.age);
                     jstudentObject.Add("hakbeon", item.hakbeon);
@@ -85,7 +96,7 @@ namespace ReadWriteJson0616
             // "students"의 객체 {[{ Student}]}
             var jstudents_object = new JObject();
             jstudents_object.Add("students", jstudentArray_object);
-           /* //만약 특정 파일 안에 데이터 넣고 싶은데 그 폴더가 없는 경우
+            //만약 특정 파일 안에 데이터 넣고 싶은데 그 폴더가 없는 경우
             //
             DirectoryInfo di = new DirectoryInfo("jsonData");
             if (!di.Exists)
@@ -93,9 +104,9 @@ namespace ReadWriteJson0616
             File.WriteAllText(@"jsonData\Students.json", jstudents_object.ToString());
             //혹은 특정 파일만 생성하고 싶을때
             StreamWriter textfile = File.CreateText("text.txt");
-            textfile.Dispose();*/
-            
-            File.WriteAllText(@"./Students.json", jstudents_object.ToString());
+            textfile.Dispose();
+
+            File.WriteAllText(@"jsonData\Students.json", jstudents_object.ToString());
         }
 
         private void btn_api_Click(object sender, EventArgs e)
@@ -169,6 +180,30 @@ namespace ReadWriteJson0616
         private void gotoForm2_Click(object sender, EventArgs e)
         {
             new Form2().ShowDialog();
+        }
+        public void load(string filename, DataGridView view)
+        {
+            students.Clear();
+            string source = File.ReadAllText(filename);
+            JObject jsonStudent = JObject.Parse(source);
+
+            foreach (var item in jsonStudent["students"]["student"])
+            {
+                Student temp = new Student();
+                temp.name = item["name"].ToString().Replace("{", "").Replace("}", "");
+                temp.age = int.Parse(item["age"].ToString().Replace("{", "").Replace("}", ""));
+                temp.hakbeon = item["hakbeon"].ToString();
+
+                students.Add(temp);
+
+            }
+            view.DataSource = null;
+            view.DataSource = students;
+        }
+
+        private void goDataview_Click(object sender, EventArgs e)
+        {
+            new Form3().ShowDialog();
         }
     }
 }

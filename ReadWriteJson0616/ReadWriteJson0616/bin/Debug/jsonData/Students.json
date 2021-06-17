@@ -8,8 +8,23 @@
       },
       {
         "name": "dd",
-        "age": "33",
+        "age": 33,
         "hakbeon": "333333"
+      },
+      {
+        "name": "df",
+        "age": 333,
+        "hakbeon": "dfadsf"
+      },
+      {
+        "name": "dfadf",
+        "age": 333,
+        "hakbeon": "fadf"
+      },
+      {
+        "name": "dd",
+        "age": "333",
+        "hakbeon": "fafa"
       }
     ]
   }

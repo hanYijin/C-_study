@@ -32,19 +32,19 @@ namespace ReadWriteJson0616
             this.components = new System.ComponentModel.Container();
             this.bnt_MemberWrite = new System.Windows.Forms.Button();
             this.btn_MemberRead = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tb_id = new System.Windows.Forms.TextBox();
-            this.tb_name = new System.Windows.Forms.TextBox();
-            this.tb_pw = new System.Windows.Forms.TextBox();
-            this.tb_tel = new System.Windows.Forms.TextBox();
-            this.tb_address = new System.Windows.Forms.TextBox();
+            this.MemberView = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pwDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.memberBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tb_id = new System.Windows.Forms.TextBox();
+            this.tb_name = new System.Windows.Forms.TextBox();
+            this.tb_pw = new System.Windows.Forms.TextBox();
+            this.tb_tel = new System.Windows.Forms.TextBox();
+            this.tb_address = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.MemberView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,23 +66,58 @@ namespace ReadWriteJson0616
             this.btn_MemberRead.TabIndex = 2;
             this.btn_MemberRead.Text = "데이터 읽기";
             this.btn_MemberRead.UseVisualStyleBackColor = true;
+            this.btn_MemberRead.Click += new System.EventHandler(this.btn_MemberRead_Click);
             // 
-            // dataGridView1
+            // MemberView
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MemberView.AutoGenerateColumns = false;
+            this.MemberView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MemberView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
             this.pwDataGridViewTextBoxColumn,
             this.telDataGridViewTextBoxColumn,
             this.addressDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.memberBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(71, 150);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(649, 251);
-            this.dataGridView1.TabIndex = 3;
+            this.MemberView.DataSource = this.memberBindingSource;
+            this.MemberView.Location = new System.Drawing.Point(71, 150);
+            this.MemberView.Name = "MemberView";
+            this.MemberView.RowTemplate.Height = 23;
+            this.MemberView.Size = new System.Drawing.Size(649, 251);
+            this.MemberView.TabIndex = 3;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // pwDataGridViewTextBoxColumn
+            // 
+            this.pwDataGridViewTextBoxColumn.DataPropertyName = "pw";
+            this.pwDataGridViewTextBoxColumn.HeaderText = "pw";
+            this.pwDataGridViewTextBoxColumn.Name = "pwDataGridViewTextBoxColumn";
+            // 
+            // telDataGridViewTextBoxColumn
+            // 
+            this.telDataGridViewTextBoxColumn.DataPropertyName = "tel";
+            this.telDataGridViewTextBoxColumn.HeaderText = "tel";
+            this.telDataGridViewTextBoxColumn.Name = "telDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // memberBindingSource
+            // 
+            this.memberBindingSource.DataSource = typeof(ReadWriteJson0616.Member);
             // 
             // tb_id
             // 
@@ -119,40 +154,6 @@ namespace ReadWriteJson0616
             this.tb_address.Size = new System.Drawing.Size(131, 21);
             this.tb_address.TabIndex = 8;
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // pwDataGridViewTextBoxColumn
-            // 
-            this.pwDataGridViewTextBoxColumn.DataPropertyName = "pw";
-            this.pwDataGridViewTextBoxColumn.HeaderText = "pw";
-            this.pwDataGridViewTextBoxColumn.Name = "pwDataGridViewTextBoxColumn";
-            // 
-            // telDataGridViewTextBoxColumn
-            // 
-            this.telDataGridViewTextBoxColumn.DataPropertyName = "tel";
-            this.telDataGridViewTextBoxColumn.HeaderText = "tel";
-            this.telDataGridViewTextBoxColumn.Name = "telDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            // 
-            // memberBindingSource
-            // 
-            this.memberBindingSource.DataSource = typeof(ReadWriteJson0616.Member);
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -163,12 +164,12 @@ namespace ReadWriteJson0616
             this.Controls.Add(this.tb_pw);
             this.Controls.Add(this.tb_name);
             this.Controls.Add(this.tb_id);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.MemberView);
             this.Controls.Add(this.btn_MemberRead);
             this.Controls.Add(this.bnt_MemberWrite);
             this.Name = "Form2";
             this.Text = "Form2";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MemberView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memberBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -179,7 +180,7 @@ namespace ReadWriteJson0616
 
         public System.Windows.Forms.Button bnt_MemberWrite;
         private System.Windows.Forms.Button btn_MemberRead;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView MemberView;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pwDataGridViewTextBoxColumn;

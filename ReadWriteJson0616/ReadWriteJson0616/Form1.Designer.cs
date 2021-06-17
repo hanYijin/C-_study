@@ -33,10 +33,6 @@ namespace ReadWriteJson0616
             this.but_write = new System.Windows.Forms.Button();
             this.btn_read = new System.Windows.Forms.Button();
             this.studentsView = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hakbeonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.textBox_age = new System.Windows.Forms.TextBox();
             this.textBox_hakbeon = new System.Windows.Forms.TextBox();
@@ -45,6 +41,7 @@ namespace ReadWriteJson0616
             this.label3 = new System.Windows.Forms.Label();
             this.btn_api = new System.Windows.Forms.Button();
             this.facilityView = new System.Windows.Forms.DataGridView();
+            this.gotoForm2 = new System.Windows.Forms.Button();
             this.numDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,11 +51,15 @@ namespace ReadWriteJson0616
             this.allpeopleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.peopleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.facilityBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gotoForm2 = new System.Windows.Forms.Button();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hakbeonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.goDataview = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.studentsView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.facilityView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.facilityBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // but_write
@@ -95,28 +96,6 @@ namespace ReadWriteJson0616
             this.studentsView.RowTemplate.Height = 23;
             this.studentsView.Size = new System.Drawing.Size(363, 211);
             this.studentsView.TabIndex = 2;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "이름";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // ageDataGridViewTextBoxColumn
-            // 
-            this.ageDataGridViewTextBoxColumn.DataPropertyName = "age";
-            this.ageDataGridViewTextBoxColumn.HeaderText = "나이";
-            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
-            // 
-            // hakbeonDataGridViewTextBoxColumn
-            // 
-            this.hakbeonDataGridViewTextBoxColumn.DataPropertyName = "hakbeon";
-            this.hakbeonDataGridViewTextBoxColumn.HeaderText = "학번";
-            this.hakbeonDataGridViewTextBoxColumn.Name = "hakbeonDataGridViewTextBoxColumn";
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataSource = typeof(ReadWriteJson0616.Student);
             // 
             // textBox_name
             // 
@@ -196,6 +175,16 @@ namespace ReadWriteJson0616
             this.facilityView.Size = new System.Drawing.Size(356, 211);
             this.facilityView.TabIndex = 10;
             // 
+            // gotoForm2
+            // 
+            this.gotoForm2.Location = new System.Drawing.Point(418, 323);
+            this.gotoForm2.Name = "gotoForm2";
+            this.gotoForm2.Size = new System.Drawing.Size(159, 90);
+            this.gotoForm2.TabIndex = 11;
+            this.gotoForm2.Text = "회원관리";
+            this.gotoForm2.UseVisualStyleBackColor = true;
+            this.gotoForm2.Click += new System.EventHandler(this.gotoForm2_Click);
+            // 
             // numDataGridViewTextBoxColumn
             // 
             this.numDataGridViewTextBoxColumn.DataPropertyName = "num";
@@ -248,21 +237,44 @@ namespace ReadWriteJson0616
             // 
             this.facilityBindingSource.DataSource = typeof(ReadWriteJson0616.Facility);
             // 
-            // gotoForm2
+            // nameDataGridViewTextBoxColumn
             // 
-            this.gotoForm2.Location = new System.Drawing.Point(450, 324);
-            this.gotoForm2.Name = "gotoForm2";
-            this.gotoForm2.Size = new System.Drawing.Size(293, 90);
-            this.gotoForm2.TabIndex = 11;
-            this.gotoForm2.Text = "회원관리";
-            this.gotoForm2.UseVisualStyleBackColor = true;
-            this.gotoForm2.Click += new System.EventHandler(this.gotoForm2_Click);
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "이름";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // ageDataGridViewTextBoxColumn
+            // 
+            this.ageDataGridViewTextBoxColumn.DataPropertyName = "age";
+            this.ageDataGridViewTextBoxColumn.HeaderText = "나이";
+            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
+            // 
+            // hakbeonDataGridViewTextBoxColumn
+            // 
+            this.hakbeonDataGridViewTextBoxColumn.DataPropertyName = "hakbeon";
+            this.hakbeonDataGridViewTextBoxColumn.HeaderText = "학번";
+            this.hakbeonDataGridViewTextBoxColumn.Name = "hakbeonDataGridViewTextBoxColumn";
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataSource = typeof(ReadWriteJson0616.Student);
+            // 
+            // goDataview
+            // 
+            this.goDataview.Location = new System.Drawing.Point(615, 323);
+            this.goDataview.Name = "goDataview";
+            this.goDataview.Size = new System.Drawing.Size(159, 90);
+            this.goDataview.TabIndex = 12;
+            this.goDataview.Text = "공공포털";
+            this.goDataview.UseVisualStyleBackColor = true;
+            this.goDataview.Click += new System.EventHandler(this.goDataview_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.goDataview);
             this.Controls.Add(this.gotoForm2);
             this.Controls.Add(this.facilityView);
             this.Controls.Add(this.btn_api);
@@ -278,9 +290,9 @@ namespace ReadWriteJson0616
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.studentsView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.facilityView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.facilityBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,6 +324,7 @@ namespace ReadWriteJson0616
         private System.Windows.Forms.DataGridViewTextBoxColumn peopleDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource facilityBindingSource;
         private System.Windows.Forms.Button gotoForm2;
+        private System.Windows.Forms.Button goDataview;
     }
 }
 
