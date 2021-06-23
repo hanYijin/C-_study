@@ -1,0 +1,10 @@
+D:\C-_study\TraceLog\TraceLog\bin\Release\TraceLog.exe.config
+D:\C-_study\TraceLog\TraceLog\bin\Release\TraceLog.exe
+D:\C-_study\TraceLog\TraceLog\bin\Release\TraceLog.pdb
+D:\C-_study\TraceLog\TraceLog\obj\Release\TraceLog.csprojAssemblyReference.cache
+D:\C-_study\TraceLog\TraceLog\obj\Release\TraceLog.Properties.Resources.resources
+D:\C-_study\TraceLog\TraceLog\obj\Release\TraceLog.csproj.GenerateResource.cache
+D:\C-_study\TraceLog\TraceLog\obj\Release\TraceLog.csproj.CoreCompileInputs.cache
+D:\C-_study\TraceLog\TraceLog\obj\Release\TraceLog.exe
+D:\C-_study\TraceLog\TraceLog\obj\Release\TraceLog.pdb
+D:\C-_study\TraceLog\TraceLog\obj\Release\TraceLog.Form1.resources

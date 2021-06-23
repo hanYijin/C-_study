@@ -205,5 +205,10 @@ namespace ReadWriteJson0616
         {
             new Form3().ShowDialog();
         }
+
+        private void btn_go_form4_Click(object sender, EventArgs e)
+        {
+            new Form4().ShowDialog();
+        }
     }
 }

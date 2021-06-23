@@ -1,0 +1,10 @@
+D:\C-_study\DB\DB\bin\Debug\DB.exe.config
+D:\C-_study\DB\DB\bin\Debug\DB.exe
+D:\C-_study\DB\DB\bin\Debug\DB.pdb
+D:\C-_study\DB\DB\obj\Debug\DB.csprojAssemblyReference.cache
+D:\C-_study\DB\DB\obj\Debug\DB.Form1.resources
+D:\C-_study\DB\DB\obj\Debug\DB.Properties.Resources.resources
+D:\C-_study\DB\DB\obj\Debug\DB.csproj.GenerateResource.cache
+D:\C-_study\DB\DB\obj\Debug\DB.csproj.CoreCompileInputs.cache
+D:\C-_study\DB\DB\obj\Debug\DB.exe
+D:\C-_study\DB\DB\obj\Debug\DB.pdb
