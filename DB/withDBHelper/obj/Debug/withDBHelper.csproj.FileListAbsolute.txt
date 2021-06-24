@@ -1,0 +1,10 @@
+D:\C-_study\DB\withDBHelper\obj\Debug\withDBHelper.csprojAssemblyReference.cache
+D:\C-_study\DB\withDBHelper\obj\Debug\withDBHelper.Form1.resources
+D:\C-_study\DB\withDBHelper\obj\Debug\withDBHelper.Properties.Resources.resources
+D:\C-_study\DB\withDBHelper\obj\Debug\withDBHelper.csproj.GenerateResource.cache
+D:\C-_study\DB\withDBHelper\obj\Debug\withDBHelper.csproj.CoreCompileInputs.cache
+D:\C-_study\DB\withDBHelper\bin\Debug\withDBHelper.exe.config
+D:\C-_study\DB\withDBHelper\bin\Debug\withDBHelper.exe
+D:\C-_study\DB\withDBHelper\bin\Debug\withDBHelper.pdb
+D:\C-_study\DB\withDBHelper\obj\Debug\withDBHelper.exe
+D:\C-_study\DB\withDBHelper\obj\Debug\withDBHelper.pdb

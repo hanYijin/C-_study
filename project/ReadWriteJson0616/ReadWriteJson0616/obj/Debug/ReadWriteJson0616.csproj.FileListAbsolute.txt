@@ -28,3 +28,4 @@ D:\C-_study\project\ReadWriteJson0616\ReadWriteJson0616\obj\Debug\ReadWriteJson0
 D:\C-_study\project\ReadWriteJson0616\ReadWriteJson0616\obj\Debug\ReadWriteJson0616.csproj.CopyComplete
 D:\C-_study\project\ReadWriteJson0616\ReadWriteJson0616\obj\Debug\ReadWriteJson0616.exe
 D:\C-_study\project\ReadWriteJson0616\ReadWriteJson0616\obj\Debug\ReadWriteJson0616.pdb
+D:\C-_study\project\ReadWriteJson0616\ReadWriteJson0616\obj\Debug\ReadWriteJson0616.Form4.resources

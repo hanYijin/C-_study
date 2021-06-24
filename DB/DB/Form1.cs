@@ -58,12 +58,16 @@ namespace DB
         private void Query_Delete()
         {
             ConnectDB();
-            string sql = "delete from TB_CUST WHERE CUST_ID = @p1 and BIRTH_DT = @p2";
+            string sql = "delete from TB_CUST WHERE CUST_ID = @p1";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conn;
             cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@p1", textBox_ID.Text);
-            cmd.Parameters.AddWithValue("@p2", textBox_Birth.Text);
+
+            DataGridViewRow row = dataGridView1.SelectedRows[0];
+            string selectid = row.Cells[0].Value.ToString();
+
+            cmd.Parameters.AddWithValue("@p1", selectid);
+           
             cmd.CommandText = sql;
             cmd.ExecuteNonQuery();
             conn.Close();
