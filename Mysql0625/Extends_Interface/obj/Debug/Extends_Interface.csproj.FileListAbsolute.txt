@@ -1,0 +1,10 @@
+D:\C-_study\Mysql0625\Extends_Interface\bin\Debug\Extends_Interface.exe.config
+D:\C-_study\Mysql0625\Extends_Interface\bin\Debug\Extends_Interface.exe
+D:\C-_study\Mysql0625\Extends_Interface\bin\Debug\Extends_Interface.pdb
+D:\C-_study\Mysql0625\Extends_Interface\obj\Debug\Extends_Interface.csprojAssemblyReference.cache
+D:\C-_study\Mysql0625\Extends_Interface\obj\Debug\Extends_Interface.Form1.resources
+D:\C-_study\Mysql0625\Extends_Interface\obj\Debug\Extends_Interface.Properties.Resources.resources
+D:\C-_study\Mysql0625\Extends_Interface\obj\Debug\Extends_Interface.csproj.GenerateResource.cache
+D:\C-_study\Mysql0625\Extends_Interface\obj\Debug\Extends_Interface.csproj.CoreCompileInputs.cache
+D:\C-_study\Mysql0625\Extends_Interface\obj\Debug\Extends_Interface.exe
+D:\C-_study\Mysql0625\Extends_Interface\obj\Debug\Extends_Interface.pdb
