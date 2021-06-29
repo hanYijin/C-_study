@@ -1,0 +1,13 @@
+D:\C-_study\projectTest\projectTest\bin\Debug\projectTest.exe.config
+D:\C-_study\projectTest\projectTest\bin\Debug\projectTest.exe
+D:\C-_study\projectTest\projectTest\bin\Debug\projectTest.pdb
+D:\C-_study\projectTest\projectTest\obj\Debug\projectTest.csprojAssemblyReference.cache
+D:\C-_study\projectTest\projectTest\obj\Debug\projectTest.Form1.resources
+D:\C-_study\projectTest\projectTest\obj\Debug\projectTest.Properties.Resources.resources
+D:\C-_study\projectTest\projectTest\obj\Debug\projectTest.csproj.GenerateResource.cache
+D:\C-_study\projectTest\projectTest\obj\Debug\projectTest.csproj.CoreCompileInputs.cache
+D:\C-_study\projectTest\projectTest\obj\Debug\projectTest.exe
+D:\C-_study\projectTest\projectTest\obj\Debug\projectTest.pdb
+D:\C-_study\projectTest\projectTest\bin\Debug\Newtonsoft.Json.dll
+D:\C-_study\projectTest\projectTest\bin\Debug\Newtonsoft.Json.xml
+D:\C-_study\projectTest\projectTest\obj\Debug\projectTest.csproj.CopyComplete
