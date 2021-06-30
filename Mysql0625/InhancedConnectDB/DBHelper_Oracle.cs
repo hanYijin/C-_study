@@ -17,10 +17,10 @@ namespace InhancedConnectDB
                             "(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))" +
                             "(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=XE)));" +
                             "User Id=AI;Password=1234;";
-        public static OracleCommand cmd = new OracleCommand();
-        public static OracleConnection oraConn;
-        public static OracleDataAdapter da;
-        public static DataSet ds;
+        public  OracleCommand cmd = new OracleCommand();
+        public  OracleConnection oraConn;
+        public new OracleDataAdapter da;
+        //public static DataSet ds;
 
         public override void ConnectDB()
         {
@@ -54,7 +54,7 @@ namespace InhancedConnectDB
             oraConn.Close();
         }
 
-        public override void Query_Update(string cust_id, string birth_dt, DataGridView dataGridView)
+        public override void Query_Update(string cust_id, string birth_dt)
         {
             ConnectDB();
             string sqlcommand = $"update tb_cust set cust_id={cust_id},birth_dt={birth_dt}";

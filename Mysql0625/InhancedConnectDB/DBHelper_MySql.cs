@@ -12,11 +12,11 @@ namespace InhancedConnectDB
 {
     class DBHelper_MySql:DBHelper
     {
-        public static MySqlConnection MyConn = new MySqlConnection();
-        public static MySqlDataAdapter da;
-        public static DataSet ds;
+        public MySqlConnection MyConn = new MySqlConnection();
+        public new MySqlDataAdapter da;
+        //public static DataSet ds;
 
-        public static void ConnectDB()
+        public override void ConnectDB()
         {
             try
             {
@@ -55,7 +55,7 @@ namespace InhancedConnectDB
             cmd.ExecuteNonQuery();
             MyConn.Close();
         }
-        public override void Query_Update(string cust_id, string birth_dt, DataGridView dataGridView)
+        public override void Query_Update(string cust_id, string birth_dt)
         {
             ConnectDB();
             string sqlcommand = $"update tb_cust set cust_id={cust_id},birth_dt={birth_dt}";

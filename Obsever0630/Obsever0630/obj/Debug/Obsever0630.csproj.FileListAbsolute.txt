@@ -1,0 +1,13 @@
+D:\C-_study\Obsever0630\Obsever0630\bin\Debug\Obsever0630.exe.config
+D:\C-_study\Obsever0630\Obsever0630\bin\Debug\Obsever0630.exe
+D:\C-_study\Obsever0630\Obsever0630\bin\Debug\Obsever0630.pdb
+D:\C-_study\Obsever0630\Obsever0630\obj\Debug\Obsever0630.csprojAssemblyReference.cache
+D:\C-_study\Obsever0630\Obsever0630\obj\Debug\Obsever0630.Form1.resources
+D:\C-_study\Obsever0630\Obsever0630\obj\Debug\Obsever0630.Form2.resources
+D:\C-_study\Obsever0630\Obsever0630\obj\Debug\Obsever0630.Form3.resources
+D:\C-_study\Obsever0630\Obsever0630\obj\Debug\Obsever0630.Form4.resources
+D:\C-_study\Obsever0630\Obsever0630\obj\Debug\Obsever0630.Properties.Resources.resources
+D:\C-_study\Obsever0630\Obsever0630\obj\Debug\Obsever0630.csproj.GenerateResource.cache
+D:\C-_study\Obsever0630\Obsever0630\obj\Debug\Obsever0630.csproj.CoreCompileInputs.cache
+D:\C-_study\Obsever0630\Obsever0630\obj\Debug\Obsever0630.exe
+D:\C-_study\Obsever0630\Obsever0630\obj\Debug\Obsever0630.pdb

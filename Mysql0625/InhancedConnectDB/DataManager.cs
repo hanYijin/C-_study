@@ -9,12 +9,17 @@ namespace InhancedConnectDB
 {
     class DataManager
     {
-        public static List<TB_Cust> tb_custs = new List<TB_Cust>();
-        public static void Load()
+        public List<TB_Cust> tb_custs = new List<TB_Cust>();
+        public DBHelper instance; //singleton patton
+        public DataManager(int db=0)
         {
-            DBHelper.Query_Select();
+            instance = new DBHelper().getInstance(db);
+        }
+        public void Load()
+        {
+            instance.Query_Select();
             tb_custs.Clear();
-            foreach(DataRow item in DBHelper.ds.Tables[0].Rows)
+            foreach(DataRow item in instance.ds.Tables[0].Rows)
             {
                 TB_Cust temp = new TB_Cust();
                 temp.cust_id = item["CUST_ID"].ToString();
@@ -23,18 +28,18 @@ namespace InhancedConnectDB
             }
         }
 
-        internal static void select()
+        internal void select()
         {
-            DBHelper.Query_Select();
+            instance.Query_Select();
         }
 
-        public static void save()
+        public void save()
         {
-            DBHelper.Query_Delete();
+            instance.Query_Delete();
            
             foreach(TB_Cust item in tb_custs)
             {
-                DBHelper.Query_Insert(item.cust_id, item.birth_dt);
+                instance.Query_Insert(item.cust_id, item.birth_dt);
             }
             /*TB_Cust tB_Cust = new TB_Cust();
             tB_Cust.cust_id = t1;

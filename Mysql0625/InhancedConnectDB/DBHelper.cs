@@ -12,10 +12,10 @@ namespace InhancedConnectDB
 {
     class DBHelper : ICrud
     {
-        public static SqlConnection conn = new SqlConnection();
-        public static SqlDataAdapter da;
-        public static DataSet ds;
-        public static DataTable dt;
+        public SqlConnection conn = new SqlConnection();
+        public SqlDataAdapter da;
+        public DataSet ds;
+        public DataTable dt;
 
         public DBHelper instance;
         public DBHelper getInstance(int num)
@@ -76,20 +76,6 @@ namespace InhancedConnectDB
             cmd.CommandText = sql;
             cmd.ExecuteNonQuery();
             conn.Close();
-            /*ConnectDB();
-            string sql = "delete from TB_CUST WHERE CUST_ID = @p1";
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conn;
-            cmd.CommandType = CommandType.Text;
-
-            DataGridViewRow row = dataGridView1.SelectedRows[0];
-            string selectid = row.Cells[0].Value.ToString();
-
-            cmd.Parameters.AddWithValue("@p1", selectid);
-
-            cmd.CommandText = sql;
-            cmd.ExecuteNonQuery();
-            conn.Close();*/
         }
 
         public virtual void Query_Insert(string cust_id, string birth_dt)
@@ -105,23 +91,7 @@ namespace InhancedConnectDB
             cmd.ExecuteNonQuery(); //쿼리 실행
             conn.Close();
         }
-        /*        public static void Query_Delete(string cust_id, string birth_dt, DataGridViewRow view)
-                {
-                    ConnectDB();
-                    string sql = "delete from TB_CUST WHERE CUST_ID = @p1";
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = conn;
-                    cmd.CommandType = CommandType.Text;
-
-                    string selectid = view.Cells[0].Value.ToString();
-                    //string selectid = row.Cells[0].Value.ToString();
-
-                    cmd.Parameters.AddWithValue("@p1", selectid);
-
-                    cmd.CommandText = sql;
-                    cmd.ExecuteNonQuery();
-                    conn.Close();
-                }*/
+     
         public virtual void Query_Update(string cust_id, string birth_dt)
         {
             ConnectDB();
